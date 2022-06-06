@@ -15,7 +15,7 @@ class App extends Component {
     super();
     this.state = {
       name: "React",
-      isUserAuthenticated: true
+      isPageLoaded: true
     };
   }
 
@@ -28,9 +28,9 @@ class App extends Component {
           element={<Home />}
           render={() => {
             return (
-              this.state.isUserAuthenticated ?
+              this.state.isPageLoaded ?
               <Navigate to="/" /> :
-              <Navigate to="/sign-up" />
+              <Navigate to="/" />
     )}} />
           <Route path='/services' element={<Services />} />
           <Route path='/products' element={<Products />} />
